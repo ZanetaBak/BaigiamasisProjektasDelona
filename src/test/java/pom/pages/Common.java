@@ -20,12 +20,9 @@ public class Common {
         Driver.closeDriver();
     }
 
-    private static WebElement getElement(By locator) {
-        return Driver.getDriver().findElement(locator);
-    }
-
-    private static List<WebElement> getElements(By locator) {
-        return Driver.getDriver().findElements(locator);
+    public static void clickElement(By locator) {
+        WebElement element = getElement(locator);
+        element.click();
     }
 
     public static void sendKeysToElement(String message, By locator) {
@@ -33,8 +30,15 @@ public class Common {
         element.sendKeys(message);
     }
 
-    public static void clickElement(By locator) {
-        WebElement element = getElement(locator);
-        element.click();
+    private static WebElement getElement(By locator) {
+        return Driver.getDriver().findElement(locator);
+    }
+
+    public static String getTextFromElement(By locator) {
+        return getElement(locator).getText();
+    }
+
+    public static String getElementAttributeParameter(String attributeName, By locator) {
+        return getElement(locator).getAttribute(attributeName);
     }
 }
