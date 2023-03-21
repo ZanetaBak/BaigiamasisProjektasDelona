@@ -37,5 +37,35 @@ public class Locators {
                     "//input[@value='Bakanauskienė' and @id='input-lastname']"
             );
         }
+
+        public class SearchBarInput {
+
+            public static By inputFieldAddress = By.xpath("//input[@name='search']");
+
+            public static By buttonSearch = By.xpath("//i[@class='fa fa-search']");
+        }
+
+        public class SearchBarOutput {
+
+            public static By outputMessageNoProductAsked = By.xpath("//p[contains(text(),'Nėra')]");
+            public static By outputProduct = By.xpath(
+                    "//div[@id='content']//img[contains(@title,'kava')]"
+            );
+        }
+
+        public class AddToCartInputs {
+
+            public static By selectTurmericWeight = By.xpath("//select[@name='option[1]']");
+            public static By inputProductUnits = By.xpath("//input[@id='input-quantity']");
+            public static By buttonAddToCart = By.xpath("//button[@id='button-cart']");
+            public static By buttonGoToCart = By.xpath("//a[@class='btn-cartpopup cartpopupcart']");
+        }
+
+        public class CartContent {
+
+            public static By turmericLine = By.xpath(
+                    "//div[@class='cart_list_name']//*[text()='Ciberžolė']"
+            );
+        }
     }
 }
