@@ -1,6 +1,5 @@
 package pom.pages.delona;
 
-import org.openqa.selenium.By;
 import pom.pages.Common;
 import pom.pages.Locators;
 
@@ -41,18 +40,15 @@ public class LoginPage {
 
     public static String readDisplayText() {
         String attributeParameter;
-
-        attributeParameter = Common.getElementAttributeParameter(
+        return attributeParameter = Common.getElementAttributeParameter(
                 "value",
                 Locators.Delona.AccountInformation.displaySurname
         );
-        System.out.println(attributeParameter);
-
-        return attributeParameter;
     }
 
     public static String readDisplayAlert() {
         return Common.getTextFromElement(Locators.Delona.LoginInfo.displayAlertMessage);
     }
+
 }
 
