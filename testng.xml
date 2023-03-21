@@ -5,7 +5,8 @@
     <test name="Demo tests">
         <classes>
             <class name="pom.tests.delona.LoginTest"/>
-
+            <class name="pom.tests.delona.SearchBarTest"/>
+            <class name="pom.tests.delona.AddItemToCartTest"/>
         </classes>
     </test>
 </suite>
